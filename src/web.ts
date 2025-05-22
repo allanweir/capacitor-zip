@@ -2,12 +2,6 @@ import { WebPlugin } from '@capacitor/core';
 import { IZip, ZipOptions, UnZipOptions, ZipResult, UnzipResult } from './definitions';
 
 export class ZipPluginWeb extends WebPlugin implements IZip {
-  constructor() {
-    super({
-      name: 'ZipPlugin',
-      platforms: ['web']
-    });
-  }
 
   zip(options: ZipOptions): Promise<ZipResult> {
     console.log(options);
